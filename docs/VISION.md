@@ -49,9 +49,9 @@ PowerQED starts with energy evidence for AI data centers.
 
 ## Positioning
 
-Not an energy blockchain. Not a marketplace.
+PowerQED is the cryptographic evidence layer for physical energy.
 
-PowerQED is the evidence infrastructure between physical energy assets and markets, settlement and regulatory claims.
+It connects physical energy assets to markets, settlement and regulatory claims through independently verifiable evidence.
 
 ## Principle
 
