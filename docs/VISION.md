@@ -18,7 +18,13 @@ Physical Asset, Measurement, Device Identity, Signed Event, Attestation, Hash Ch
 
 Current energy data flows through:
 
-Inverter, Gateway, Aggregator, Cloud API, Database, CSV/PDF, Auditor.
+- Inverter
+- Gateway
+- Aggregator
+- Cloud API
+- Database
+- CSV/PDF
+- Auditor
 
 In the end, someone must trust the aggregator's database.
 
