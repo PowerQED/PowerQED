@@ -28,13 +28,13 @@ PowerQED removes that trust. Every step has provenance and a trust level.
 
 Not all energy events are equally reliable.
 
-Q0 Reported
-Q1 Authenticated
-Q2 Gateway Signed
-Q3 Device Signed
-Q4 Hardware Attested
-Q5 Meter Grade
-Q6 Settlement Grade
+- Q0 Reported
+- Q1 Authenticated
+- Q2 Gateway Signed
+- Q3 Device Signed
+- Q4 Hardware Attested
+- Q5 Meter Grade
+- Q6 Settlement Grade
 
 ## Focus
 
