@@ -71,19 +71,21 @@
 - Ethereum L1 / L2
 - Traditional market systems
 
-## Infrastructure
+## Abstractions
 
-PowerQED Network is built on Eigen stack.
+The system follows SOLID principles and adheres to Clean Architecture guidelines.
 
-- EigenDA for temporary evidence data
-- EigenLayer for shared security
-- EigenCompute as backend for heavy compute
+Each infrastructure dependency is decoupled via interfaces, including:
 
-The system stays pluggable.
+- DataAvailability
+- ComputeBackend
+- ProofEngine
+- AttestationProvider
+- SettlementAdapter
 
-- Data Availability abstraction
-- Compute abstraction
-- Proof Engine abstraction: Groth16, Plonk, STARK, Flock
+Implementations can be seamlessly swapped without requiring modifications to the Energy Evidence Protocol.
+
+The design is inherently testable by contract. Each adapter implements a defined interface, enabling straightforward replacement with mocks or alternative backends.
 
 ## Connectors Strategy
 
