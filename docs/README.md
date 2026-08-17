@@ -14,9 +14,9 @@ Blueprint phase. Documentation in progress.
 
 ## Docs
 
-- [Vision](docs/VISION.md)
-- [Architecture](docs/ARCHITECTURE.md)
-- [MVP](docs/MVP.md)
-- [Proof Grades](docs/PROOF_GRADES.md)
-- [Energy Evidence Protocol](docs/EVIDENCE_PROTOCOL.md)
-- [Connectors](docs/CONNECTORS.md)
+- [Vision](VISION.md)
+- [Architecture](ARCHITECTURE.md)
+- [MVP](MVP.md)
+- [Proof Grades](PROOF_GRADES.md)
+- [Energy Evidence Protocol](EVIDENCE_PROTOCOL.md)
+- [Connectors](CONNECTORS.md)
