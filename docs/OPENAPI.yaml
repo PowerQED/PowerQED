@@ -1,0 +1,211 @@
+openapi: 3.1.0
+info:
+  title: PowerQED API
+  version: 0.1.0
+  description: |
+    Cryptographic evidence layer for physical energy.
+    Converts metered energy, device identity and operational events
+    into independently verifiable, policy-bound claims.
+
+servers:
+  - url: https://api.powerqed.io/v1
+    description: Production API
+  - url: https://staging.api.powerqed.io/v1
+    description: Staging API
+
+tags:
+  - name: Assets
+    description: Physical assets and measurement boundaries
+  - name: Events
+    description: Signed energy events
+  - name: Evidence
+    description: Evidence packages and verification
+  - name: Claims
+    description: Policy-bound energy claims
+
+paths:
+  /assets:
+    post:
+      tags: [Assets]
+      summary: Register physical asset
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AssetCreate'
+      responses:
+        '201':
+          description: Asset registered
+
+  /boundaries:
+    post:
+      tags: [Assets]
+      summary: Create measurement boundary
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BoundaryCreate'
+      responses:
+        '201':
+          description: Boundary created
+
+  /events:
+    post:
+      tags: [Events]
+      summary: Submit signed energy event
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EventCreate'
+      responses:
+        '202':
+          description: Event accepted
+
+  /claims:
+    post:
+      tags: [Claims]
+      summary: Evaluate claim
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClaimRequest'
+      responses:
+        '200':
+          description: Claim result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClaimResult'
+
+  /claims/{id}/verify:
+    get:
+      tags: [Claims]
+      summary: Verify claim
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Verification result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VerificationResult'
+
+components:
+  schemas:
+    AssetCreate:
+      type: object
+      properties:
+        deviceId:
+          type: string
+          semanticTag: entityId
+        manufacturer:
+          type: string
+        model:
+          type: string
+        serialNumber:
+          type: string
+        assetType:
+          type: string
+          semanticTag: assetType
+
+    BoundaryCreate:
+      type: object
+      properties:
+        siteId:
+          type: string
+        topologyVersion:
+          type: integer
+        incoming:
+          type: array
+          items:
+            type: string
+        generation:
+          type: array
+          items:
+            type: string
+        storage:
+          type: array
+          items:
+            type: string
+        loads:
+          type: array
+          items:
+            type: string
+
+    EventCreate:
+      type: object
+      required: [sourceId, eventType, intervalStart, intervalEnd, value, signature]
+      properties:
+        sourceId:
+          type: string
+          semanticTag: sourceId
+        eventType:
+          type: string
+        intervalStart:
+          type: string
+          format: date-time
+        intervalEnd:
+          type: string
+          format: date-time
+        value:
+          type: number
+        unit:
+          type: string
+        direction:
+          type: string
+        signature:
+          type: string
+
+    ClaimRequest:
+      type: object
+      required: [subject, period, policy]
+      properties:
+        subject:
+          type: string
+        period:
+          type: string
+        policy:
+          type: string
+
+    ClaimResult:
+      type: object
+      properties:
+        claimId:
+          type: string
+        subject:
+          type: string
+        period:
+          type: string
+        consumption:
+          type: number
+        matchedGeneration:
+          type: number
+        policy:
+          type: string
+        evidence:
+          type: string
+        proof:
+          type: string
+
+    VerificationResult:
+      type: object
+      properties:
+        claimId:
+          type: string
+        isValid:
+          type: boolean
+        verifiedAt:
+          type: string
+          format: date-time
