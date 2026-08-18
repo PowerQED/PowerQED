@@ -35,4 +35,9 @@ Blueprint phase. Documentation in progress.
 - [Overview](OVERVIEW.md)
 - [Roadmap](ROADMAP.md)
 - [OpenAPI draft](OPENAPI.yaml)
-- [ADR](adr/0001-evidence-first.md)
+
+## ADR
+
+- [ADR 0001: Evidence First](adr/0001-evidence-first.md)
+- [ADR 0002: Measurement Boundary](adr/0002-measurement-boundary.md)
+- [ADR 0003: Pluggable Infrastructure](adr/0003-pluggable-infrastructure.md)
