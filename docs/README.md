@@ -36,6 +36,12 @@ Blueprint phase. Documentation in progress.
 - [Roadmap](ROADMAP.md)
 - [OpenAPI draft](OPENAPI.yaml)
 
+## More
+
+- [Business Model](BUSINESS_MODEL.md)
+- [Pilot](PILOT.md)
+- [License](../LICENSE.md)
+
 ## ADR
 
 - [ADR 0001: Evidence First](adr/0001-evidence-first.md)
