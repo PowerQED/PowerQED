@@ -27,6 +27,7 @@ Blueprint phase. Documentation in progress.
 - [Measurement Boundary](MEASUREMENT_BOUNDARY.md)
 - [Evidence Assurance](EVIDENCE_ASSURANCE.md)
 - [Energy Evidence Protocol](EVIDENCE_PROTOCOL.md)
+- [Smart Meter Ingestion](SMART_METER_INGESTION.md)
 - [Evidence Graph](EVIDENCE_GRAPH.md)
 - [Connectors](CONNECTORS.md)
 - [AI-Friendly Design](AI_FRIENDLY.md)
