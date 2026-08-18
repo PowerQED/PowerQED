@@ -54,6 +54,7 @@ Gateway signing with hardware attestation.
 
 ## Example
 
+```json
 {
   "eventId": "evt_01HZ...",
   "sourceId": "meter_solar_01",
@@ -68,6 +69,7 @@ Gateway signing with hardware attestation.
   "previousEventHash": "0x...",
   "signature": "0x..."
 }
+```
 
 ## Design Notes
 

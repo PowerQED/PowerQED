@@ -11,6 +11,7 @@
 - Measurement Boundary
 - Evidence Assurance
 - Energy Evidence Protocol
+- Smart Meter Ingestion
 - Evidence Graph
 - Connectors
 - AI-Friendly Design
