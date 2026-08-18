@@ -40,6 +40,8 @@ Blueprint phase. Documentation in progress.
 
 - [Business Model](BUSINESS_MODEL.md)
 - [Pilot](PILOT.md)
+- [Changelog](CHANGELOG.md)
+- [X / Twitter](https://x.com/PowerQED)
 - [License](../LICENSE.md)
 
 ## ADR
