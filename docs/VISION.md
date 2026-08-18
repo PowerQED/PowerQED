@@ -6,13 +6,13 @@ PowerQED is the cryptographic evidence layer for physical energy.
 
 ## What PowerQED Does
 
-PowerQED turns energy measurements, device identity and market actions into independently verifiable evidence.
+PowerQED converts metered energy, device identity and operational events into independently verifiable, policy-bound claims.
 
-Not "we generated 5 kWh." But "there is a verifiable chain of proof showing where these 5 kWh came from."
+Not "the AI runs on clean energy." But "there is verifiable evidence showing how, when and under which rules the electricity behind AI infrastructure was generated, stored, consumed and matched with carbon-free energy."
 
 ## The Chain
 
-Physical Asset, Measurement, Device Identity, Signed Event, Attestation, Hash Chain, Aggregation, Proof, Settlement / Certificate / Audit.
+Physical Reality, Measurement Boundary, Meter Evidence, Identity, Signed Evidence Event, Provenance Graph, Policy Evaluation, Cryptographic Claim, Certificate / Audit / Settlement.
 
 ## Problem
 
@@ -26,21 +26,33 @@ Current energy data flows through:
 - CSV/PDF
 - Auditor
 
-In the end, someone must trust the aggregator's database.
+In the end, someone trusts the aggregator's database.
 
-PowerQED removes that trust. Every step has provenance and a trust level.
+PowerQED replaces that trust with evidence.
 
-## Proof Grades
+## Core Concepts
 
-Not all energy events are equally reliable.
+### Measurement Boundary
 
-- Q0 Reported
-- Q1 Authenticated
-- Q2 Gateway Signed
-- Q3 Device Signed
-- Q4 Hardware Attested
-- Q5 Meter Grade
-- Q6 Settlement Grade
+A signed statement of all energy sources and loads at a site.
+
+Without a complete boundary, perfectly signed data can still be a lie through omission.
+
+### Evidence Assurance
+
+Every source is evaluated across:
+
+Identity, Authentication, Integrity, Attestation, Metrology, Time, Provenance, Completeness, MarketEligibility.
+
+Derived Proof Grade is a UI label, not a strict hierarchy.
+
+### Evidence Graph
+
+A verifiable knowledge graph of physical energy.
+
+AI Job, GPU Cluster, Facility Load, Meter, Energy Interval, Wind Generation, Solar Generation, Granular Certificate.
+
+Every edge has subject, predicate, object, validity, issuer, policy, evidence hash, signature, proof.
 
 ## Focus
 
@@ -50,14 +62,17 @@ PowerQED starts with energy evidence for AI data centers.
 
 - 24/7 Carbon-Free Energy Matching
 - Verified Flexibility
+- Workload Energy Attribution
 - EV Fleet Charging Provenance
 - ESG Audit
 
 ## Positioning
 
-PowerQED is the cryptographic evidence layer for physical energy.
+PowerQED is the evidence infrastructure on which energy claims are built.
 
-It connects physical energy assets to markets, settlement and regulatory claims through independently verifiable evidence.
+Physical assets, PowerQED Evidence Package, then EnergyTag, Registry, ESG system, Settlement, Grid market, Auditor.
+
+PowerQED owns the evidence.
 
 ## Principle
 

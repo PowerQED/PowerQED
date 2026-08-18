@@ -1,20 +1,31 @@
 # PowerQED Architecture
 
+## Core
+
+PowerQED is built around three core systems:
+
+- Energy Evidence Protocol
+- Evidence Assurance Model
+- Evidence Graph / Policy Engine
+
+These are the product. Infrastructure is replaceable.
+
 ## Layers
 
 ### Applications
 
 - 24/7 Carbon-Free Matching
 - Verified Flexibility
+- Workload Energy Attribution
 - EV Fleet Charging
 - ESG Audit
 
 ### Verification Engine
 
-- Policies
-- Claims
-- ZK Proofs
+- Policy evaluation
+- Claim generation
 - Aggregation
+- Optional ZK proofs
 
 ### Evidence Graph
 
@@ -30,13 +41,46 @@
 - Timestamp
 - Signatures
 
+### Measurement Boundary
+
+- Incoming sources
+- Generation sources
+- Storage
+- Loads
+- Topology version
+- Signed by operator and verifier
+
+### Evidence Assurance
+
+Every source evaluated across:
+
+- Identity
+- Authentication
+- Integrity
+- Attestation
+- Metrology
+- Time
+- Provenance
+- Completeness
+- MarketEligibility
+
 ### Trust / Attestation
 
+Physical asset attestation:
+
 - TPM 2.0
-- Intel TDX
-- ARM PSA
-- OEM PKI
 - Secure Element
+- OEM PKI
+- Meter certificate
+- Gateway identity
+
+Compute attestation:
+
+- Intel TDX
+- AMD SEV-SNP
+- vTPM
+- Workload identity
+- Container digest
 
 ### Connectors
 
@@ -49,9 +93,15 @@
 ### Physical Assets
 
 - Solar
-- Battery
 - Wind
-- Data Center Load
+- Battery
+- Grid
+- Backup generator
+- Data center load
+
+## Data Flow
+
+Physical event, signed event, evidence graph, policy evaluation, claim, certificate / settlement.
 
 ## Storage
 
@@ -59,6 +109,14 @@
 - Object Storage: raw telemetry
 - EigenDA: temporary evidence data
 - Permanent Storage: commitments and final proofs
+
+## Commitments
+
+Source-local sequence with optional previous event hash.
+
+15-minute batch, Merkle tree, batch manifest, signed root, DA / Ethereum anchor.
+
+Evidence Graph builds on top.
 
 ## Compute
 
@@ -71,11 +129,17 @@
 - Ethereum L1 / L2
 - Traditional market systems
 
+## Decentralized Verification
+
+Optional decentralized verification network.
+
+PowerQED AVS verifies evidence, attestation, policy execution, proof verification, dispute resolution.
+
+EigenLayer as potential shared security for the verifier set.
+
 ## Abstractions
 
-The system follows SOLID principles and adheres to Clean Architecture guidelines.
-
-Each infrastructure dependency is decoupled via interfaces, including:
+The system follows SOLID principles and Clean Architecture.
 
 - DataAvailability
 - ComputeBackend
@@ -83,17 +147,7 @@ Each infrastructure dependency is decoupled via interfaces, including:
 - AttestationProvider
 - SettlementAdapter
 
-Implementations can be seamlessly swapped without requiring modifications to the Energy Evidence Protocol.
-
-The design is inherently testable by contract. Each adapter implements a defined interface, enabling straightforward replacement with mocks or alternative backends.
-
-## Connectors Strategy
-
-PowerQED connects through standard industrial protocols.
-
-Each connector has a Trust Profile.
-
-PowerQED shows the origin of a fact and the trust level of every link in the chain.
+Every dependency is behind an interface. Implementations can be swapped without changing the Energy Evidence Protocol.
 
 ## Interface
 
