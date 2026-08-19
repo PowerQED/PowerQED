@@ -124,6 +124,19 @@ Evidence Graph builds on top.
 - Customer compute
 - EigenCompute as backend
 
+## Proof Engine
+
+Pluggable proof backend.
+
+- Groth16
+- Plonk
+- STARK
+- Flock-class proofs
+
+Flock-class proofs run on x86 Linux. Post-quantum proving already 3x faster on Mac, x86 ceiling still open.
+
+Benchmarks on real PowerQED circuits.
+
 ## Settlement
 
 - Ethereum L1 / L2
