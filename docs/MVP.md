@@ -6,11 +6,11 @@ Prove that PowerQED can produce trustworthy energy evidence for one real site.
 
 ## Timeline
 
-3–5 months.
+3–4 months.
 
 ## Budget
 
-$250–300K.
+$170–200K.
 
 ## Team
 
@@ -22,6 +22,16 @@ $250–300K.
 All team members handle DevOps responsibilities.
 
 Team can be doubled with full-time developers if required.
+
+## Existing Platform
+
+C# Blazor operational platform is reused.
+
+First demo within 1–2 weeks: map, documents, reports, SLA, chat.
+
+Blockchain integration comes after the demo.
+
+This reduces risk and accelerates the pilot.
 
 ## Scope
 
