@@ -137,6 +137,16 @@ Flock-class proofs run on x86 Linux. Post-quantum proving already 3x faster on M
 
 Benchmarks on real PowerQED circuits.
 
+## Proof Verification
+
+Proof systems are validated by formal verification where available.
+
+Hash-based SNARKs for post-quantum Ethereum are formally verified through Lean 4 via Yukon Research and Ethereum Foundation.
+
+Ethereum Foundation and zkSecurity run a $1M proximity challenge to establish strong security bounds.
+
+PowerQED adopts formally verified proof backends when production ready.
+
 ## Settlement
 
 - Ethereum L1 / L2
