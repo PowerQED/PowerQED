@@ -50,3 +50,11 @@ Blueprint phase. Documentation in progress.
 - [ADR 0001: Evidence First](adr/0001-evidence-first.md)
 - [ADR 0002: Measurement Boundary](adr/0002-measurement-boundary.md)
 - [ADR 0003: Pluggable Infrastructure](adr/0003-pluggable-infrastructure.md)
+
+## Future Ideas
+
+Draft directions for product expansion beyond the core energy evidence layer.
+
+P2P energy, granular certificates, grid flexibility, EV fleet, compute evidence, heat recovery.
+
+- [Future Product Ideas](potential/README.md)
