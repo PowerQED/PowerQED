@@ -57,4 +57,4 @@ Draft directions for product expansion beyond the core energy evidence layer.
 
 P2P energy, granular certificates, grid flexibility, EV fleet, compute evidence, heat recovery.
 
-- [Future Product Ideas](potential/README.md)
+- [Future Product Ideas](../research/potential/README.md)
