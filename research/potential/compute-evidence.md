@@ -24,6 +24,14 @@ Data center meter does not know which workload used the energy.
 - PDU telemetry
 - Energy Evidence Protocol
 
+## Attestation Provider
+
+Darkbloom — hardware attestation on Apple Silicon.
+
+Validated model: $102K ARR, 4.5B tokens served, 250 Macs.
+
+Candidate for compute attestation in AI data centers.
+
 ## Why Later
 
 This is a second evidence domain beyond physical energy.

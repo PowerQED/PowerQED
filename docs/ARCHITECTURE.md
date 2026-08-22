@@ -10,6 +10,18 @@ PowerQED is built around three core systems:
 
 These are the product. Infrastructure is replaceable.
 
+## Backend & Frontend
+
+- C# Blazor Server / WebAssembly — single stack.
+- ASP.NET Core — REST API, OpenAPI, webhooks.
+- Entity Framework Core + MS SQL Server — operational data, analytics.
+- FluentValidation — request and domain validation.
+- MediatR + CQRS — command and query separation.
+- SignalR — real-time updates.
+- RabbitMQ — message bus for telemetry and event processing.
+- Redis — hot cache and pub/sub.
+- Seq — structured logging and tracing.
+
 ## Layers
 
 ### Applications
@@ -105,10 +117,71 @@ Physical event, signed event, evidence graph, policy evaluation, claim, certific
 
 ## Storage
 
-- MS SQL: operational data, reference data, reports
-- Object Storage: raw telemetry
-- EigenDA: temporary evidence data
-- Permanent Storage: commitments and final proofs
+PowerQED uses different storage layers for different purposes.
+
+### Redis
+
+Purpose: speed and real-time.
+
+Use cases:
+
+- Hot cache for active assets and boundaries
+- Pub/Sub for meter events and alerts
+- Rate limiting for API
+- Job queues for event processing
+
+Redis is an operational cache. It is not a system of record.
+
+### MS SQL
+
+Purpose: system of record.
+
+Use cases:
+
+- Assets, boundaries, policies, claims
+- Reports and analytics
+- Reference data
+
+MS SQL stores current state and business data.
+
+### Object Storage
+
+Purpose: raw telemetry.
+
+Use cases:
+
+- Raw meter readings
+- Historical sensor data
+
+Object storage keeps raw data with retention policies.
+
+### EigenDA
+
+Purpose: temporary evidence availability.
+
+Use cases:
+
+- Signed meter events
+- Hash chains
+- Temporary evidence before aggregation
+
+EigenDA provides short-term verifiable availability. It is not permanent storage.
+
+### Permanent Storage
+
+Purpose: permanent evidence.
+
+Use cases:
+
+- Final Evidence Packages
+- Proof roots
+- Audit records
+
+Permanent storage preserves what must survive for years.
+
+### Principle
+
+Redis speeds up operations. MS SQL records state. Object storage keeps raw data. EigenDA proves availability. Permanent storage preserves truth.
 
 ## Commitments
 
@@ -146,6 +219,14 @@ Hash-based SNARKs for post-quantum Ethereum are formally verified through Lean 4
 Ethereum Foundation and zkSecurity run a $1M proximity challenge to establish strong security bounds.
 
 PowerQED adopts formally verified proof backends when production ready.
+
+### Verification Backends
+
+Pluggable proof verification services.
+
+- Native verifier
+- Aligned Proof Aggregation — potential backend for cheap ZK verification at scale
+- EigenLayer — optional decentralized verification
 
 ## Settlement
 
