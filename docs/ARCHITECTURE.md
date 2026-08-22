@@ -241,6 +241,23 @@ PowerQED AVS verifies evidence, attestation, policy execution, proof verificatio
 
 EigenLayer as potential shared security for the verifier set.
 
+## Observability
+
+- Seq — structured logging.
+- Correlation ID — end-to-end tracing across all async flows.
+- Grafana — dashboards and metrics.
+- Every evidence event traceable from ingest to Arweave.
+
+Data is not lost. Every packet can be traced in seconds.
+
+## AI-Friendly Design
+
+PowerQED is AI-ready.
+
+Semantic tags on all entities. OpenAPI documented API. Webhooks for external agents.
+
+See [AI_FRIENDLY.md](AI_FRIENDLY.md).
+
 ## Abstractions
 
 The system follows SOLID principles and Clean Architecture.
