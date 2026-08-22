@@ -32,6 +32,7 @@ Blueprint phase. Documentation in progress.
 - [Connectors](CONNECTORS.md)
 - [AI-Friendly Design](AI_FRIENDLY.md)
 - [Security](SECURITY.md)
+- [Authorization](AUTHORIZATION.md)
 - [Data Flow](DATA_FLOW.md)
 - [Overview](OVERVIEW.md)
 - [Roadmap](ROADMAP.md)
