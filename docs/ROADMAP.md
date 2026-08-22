@@ -8,7 +8,7 @@ Documentation, architecture, MVP definition.
 
 ## Phase 1: Pilot MVP
 
-3–5 months.
+3–4 months. $170–200K.
 
 One data center campus.
 
