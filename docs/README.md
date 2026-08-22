@@ -35,6 +35,7 @@ Blueprint phase. Documentation in progress.
 - [Data Flow](DATA_FLOW.md)
 - [Overview](OVERVIEW.md)
 - [Roadmap](ROADMAP.md)
+- [Development Process](DEVELOPMENT.md)
 - [OpenAPI draft](OPENAPI.yaml)
 
 ## More
